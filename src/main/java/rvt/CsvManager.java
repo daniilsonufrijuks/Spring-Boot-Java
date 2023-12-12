@@ -1,5 +1,5 @@
 package rvt;
 
-public abstract class CsvManager {
+public class CsvManager {
 
 }
