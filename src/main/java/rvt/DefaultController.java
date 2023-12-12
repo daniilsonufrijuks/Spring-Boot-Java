@@ -42,6 +42,9 @@ public class DefaultController {
 
     @GetMapping(value = "/about")
     ModelAndView about() {
+        // CsvManager manager = new CsvManager();
+        // List hobbies = manager.getAllHobbies();
+
         ModelAndView modelAndView = new ModelAndView("about");
         String name = "Dannils";
         String surename = "Onufrijuks";
