@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,17 +26,31 @@ public class DefaultController {
 //     }
 
 
+    // @GetMapping(value = "/about")
+    // String hello(Model model2) {
+    //     String name = "Dannils";
+    //     String surename = "Onufrijuks";
+    //     int age = 17;
+    //     String group = "DP 2-1";
+    //     model2.addAttribute("name", name);
+    //     model2.addAttribute("surename", surename);
+    //     model2.addAttribute("age", age);
+    //     model2.addAttribute("group", group);
+
+    //     return "about";
+    // }
+
     @GetMapping(value = "/about")
-    String hello(Model model2) {
+    ModelAndView about() {
+        ModelAndView modelAndView = new ModelAndView("about");
         String name = "Dannils";
         String surename = "Onufrijuks";
         int age = 17;
         String group = "DP 2-1";
-        model2.addAttribute("name", name);
-        model2.addAttribute("surename", surename);
-        model2.addAttribute("age", age);
-        model2.addAttribute("group", group);
-
-        return "about";
+        modelAndView.addObject("name", name);
+        modelAndView.addObject("surename", surename);
+        modelAndView.addObject("age", age);
+        modelAndView.addObject("group", group);
+        return modelAndView;
     }
 }
