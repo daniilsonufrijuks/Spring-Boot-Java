@@ -12,14 +12,14 @@ public class Hobby {
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public String getTitle() {
-        return this.title;
+        return title;
     }
 
     public String getDescription() {
-        return this.description;
+        return description;
     }
 }
