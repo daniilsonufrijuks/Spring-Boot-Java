@@ -66,12 +66,12 @@ public class DefaultController {
         // car1.put("model", "mustang");
         // car1.get("brand");
         
-        String name = allParams.get("name");
-        String age = allParams.get("age");
+        // String name = allParams.get("name");
+        // String age = allParams.get("age");
 
         ModelAndView modelAndView = new ModelAndView("about");
-        modelAndView.addObject("name", name);
-        modelAndView.addObject("age", age);
+        // modelAndView.addObject("name", name);
+        // modelAndView.addObject("age", age);
 
         return modelAndView;
     }
