@@ -8,10 +8,13 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <h2 id="h1">About me</h2>
+    <!-- <h2 id="h1">About me</h2>
     <p th:text="${name}"></p>
     <p th:text="${surename}"></p>
     <p th:text="${age}"></p>
-    <p th:text="${group}"></p>
+    <p th:text="${group}"></p> -->
+
+    <h3 th:text="'Sveiks, tevi sauc - ' + ${name}"></h3>
+    <p th:text="'Tavs vecums ir: ' + ${age}"></p>
 </body>
 </html>

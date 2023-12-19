@@ -1,5 +1,7 @@
 package rvt;
 
+import java.util.HashMap;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,20 +42,51 @@ public class DefaultController {
     //     return "about";
     // }
 
+    // @GetMapping(value = "/about")
+    // ModelAndView about() {
+    //     // CsvManager manager = new CsvManager();
+    //     // List hobbies = manager.getAllHobbies();
+
+    //     ModelAndView modelAndView = new ModelAndView("about");
+    //     String name = "Dannils";
+    //     String surename = "Onufrijuks";
+    //     int age = 17;
+    //     String group = "DP 2-1";
+    //     modelAndView.addObject("name", name);
+    //     modelAndView.addObject("surename", surename);
+    //     modelAndView.addObject("age", age);
+    //     modelAndView.addObject("group", group);
+    //     return modelAndView;
+    // }
+
     @GetMapping(value = "/about")
-    ModelAndView about() {
-        // CsvManager manager = new CsvManager();
-        // List hobbies = manager.getAllHobbies();
+    ModelAndView about(@RequestParam HashMap<String, String> allParams) {
+        // HashMap<String, String> car1 = new HashMap<>();
+        // car1.put("brand", "value");
+        // car1.put("model", "mustang");
+        // car1.get("brand");
+        
+        String name = allParams.get("name");
+        String age = allParams.get("age");
 
         ModelAndView modelAndView = new ModelAndView("about");
-        String name = "Dannils";
-        String surename = "Onufrijuks";
-        int age = 17;
-        String group = "DP 2-1";
         modelAndView.addObject("name", name);
-        modelAndView.addObject("surename", surename);
         modelAndView.addObject("age", age);
-        modelAndView.addObject("group", group);
+
         return modelAndView;
     }
+
+
+    // @GetMapping(value = "/about")
+    // ModelAndView about(
+    //     @RequestParam HashMap<String, String> allParams 
+    //     ) {
+
+    //     ModelAndView modelAndView = new ModelAndView("about");
+    //     CsvManager manager = new CsvManager(CsvManager.HOBBIES_CSV);
+    //     manager.addHobbyToCsv (
+    //         new String[]{allParams.get("id"), allParams.get("title"), allParams.get("discription")}
+    //     );
+    //     return modelAndView;
+    // }
 }
