@@ -71,7 +71,7 @@ public class DefaultController {
 
         ModelAndView modelAndView = new ModelAndView("about");
         // modelAndView.addObject("name", name);
-        // modelAndView.addObject("age", age);
+        // modelAndView.addObject("age", age);  
 
 
         // happy new year 
