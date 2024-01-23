@@ -60,7 +60,7 @@ public class MoneyTest {
     public void testLesstahnMethod() { // unit test for Mone class #5
         Money newMoney11 = new Money(10, 0);
         Money newMoney12 = new Money(3, 0);
-        Money result6 = newMoney11.lessThan(newMoney12);
-        assertEquals();
+        Boolean result6 = newMoney11.lessThan(newMoney12);
+        assertEquals(false, result6);
     }
 }
