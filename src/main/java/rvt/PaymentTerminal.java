@@ -60,7 +60,7 @@ public class PaymentTerminal {
         // ...
         card.addMoney(sum);
     }
-
+    
     public String toString() {
         return "money: " + money + ", number of sold afforable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
     }
