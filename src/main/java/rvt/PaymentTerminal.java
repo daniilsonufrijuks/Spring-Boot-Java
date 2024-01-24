@@ -38,32 +38,42 @@ public class PaymentTerminal {
         // an affordable meal costs 2.50 euros
         // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
         // otherwise false is returned
+        if (card.balance() > 2.50) {
+            return card.takeMoney(2.50);
+        }
+        this.affordableMeals++;
+        return false;
     }
 
     public boolean eatHeartily(PaymentCard card) {
         // a hearty meal costs 4.30 euros
         // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
         // otherwise false is returned
+        if (card.balance() > 4.30) {
+            return card.takeMoney(4.30);
+        }
+        this.affordableMeals++;
+        return false;
     }
 
     public String toString() {
         return "money: " + money + ", number of sold afforable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
     }
 
-    public class MainProgram {
-        public static void main(String[] args) {
-            PaymentTerminal unicafeExactum = new PaymentTerminal();
+    // public class MainProgram {
+    //     public static void main(String[] args) {
+    //         PaymentTerminal unicafeExactum = new PaymentTerminal();
     
-            double change = unicafeExactum.eatAffordably(10);
-            System.out.println("remaining change " + change);
+    //         double change = unicafeExactum.eatAffordably(10);
+    //         System.out.println("remaining change " + change);
     
-            change = unicafeExactum.eatAffordably(5);
-            System.out.println("remaining change " + change);
+    //         change = unicafeExactum.eatAffordably(5);
+    //         System.out.println("remaining change " + change);
     
-            change = unicafeExactum.eatHeartily(4.3);
-            System.out.println("remaining change " + change);
+    //         change = unicafeExactum.eatHeartily(4.3);
+    //         System.out.println("remaining change " + change);
     
-            System.out.println(unicafeExactum);
-        }
-    }
+    //         System.out.println(unicafeExactum);
+    //     }
+    // }
 }
