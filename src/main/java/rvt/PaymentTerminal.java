@@ -52,7 +52,7 @@ public class PaymentTerminal {
         if (card.balance() > 4.30) {
             return card.takeMoney(4.30);
         }
-        this.affordableMeals++;
+        this.heartyMeals++;
         return false;
     }
 
