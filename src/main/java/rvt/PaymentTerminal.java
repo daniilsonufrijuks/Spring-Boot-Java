@@ -14,12 +14,24 @@ public class PaymentTerminal {
         // an affordable meal costs 2.50 euros
         // increase the amount of cash by the price of an affordable meal and return the change
         // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
+        this.money = this.money + payment;
+        if (payment < 2.50) {
+            return payment;
+        }
+        this.affordableMeals++;
+        return payment - 2.50;
     }
 
     public double eatHeartily(double payment) {
         // a hearty meal costs 4.30 euros
         // increase the amount of cash by the price of a hearty meal and return the change
         // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
+        this.money = this.money + payment;
+        if (payment < 4.30) {
+            return payment;
+        }
+        this.heartyMeals++;
+        return payment - 4.30;
     }
 
     public String toString() {
