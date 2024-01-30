@@ -50,6 +50,18 @@ public class Sort {
         array[index2] = temp;
     }
 
+    public static void sort(int[] array) {
+        for (int i = array.length-1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j  + 1] = temp;
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int[] numbers = {6, 5, 8, 7, 11};
         System.out.println("Smallest: " + smallest(numbers));
@@ -79,6 +91,13 @@ public class Sort {
         swap(numbers4, 0, 3);
         for (int i = 0; i < numbers4.length; i++) {
             System.out.print(numbers4[i]);
+        }
+
+        System.out.println();
+        int[] numbers5 = {8, 3, 7, 9, 1, 2, 4};
+        sort(numbers5);
+        for (int i = 0; i < numbers5.length; i++) {
+            System.out.print(numbers5[i]);
         }
     }
 }
