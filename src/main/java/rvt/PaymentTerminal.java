@@ -15,6 +15,7 @@ public class PaymentTerminal {
         // increase the amount of cash by the price of an affordable meal and return the change
         // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
         this.money = this.money + 2.50;
+        // this.money += 2.50;
         if (payment < 2.50) {
             return payment;
         }
