@@ -44,10 +44,10 @@ public class Sort {
 
     public static void swap(int[] array, int index1, int index2) {
         // write your code here
-        // for (int i = 0; i < array.length; i++) {
-        //     array
-        // }
+
+        int temp = array[index1];
         array[index1] = array[index2];
+        array[index2] = temp;
     }
 
     public static void main(String[] args) {
@@ -66,12 +66,19 @@ public class Sort {
 
         int[] numbers4 = {3, 2, 5, 4, 8};
 
-        System.out.println(numbers4);
+        //System.out.println(numbers4);
 
-        swap(numbers, 1, 0);
-        System.out.println(numbers4);
+        swap(numbers4, 1, 0);
+        for (int i = 0; i < numbers4.length; i++) {
+            System.out.print(numbers4[i]);
+        }
 
-        swap(numbers, 0, 3);
-        System.out.println(numbers4);
+
+        System.out.println();
+
+        swap(numbers4, 0, 3);
+        for (int i = 0; i < numbers4.length; i++) {
+            System.out.print(numbers4[i]);
+        }
     }
 }
