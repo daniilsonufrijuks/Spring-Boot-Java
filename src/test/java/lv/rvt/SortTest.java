@@ -1,5 +1,6 @@
 package lv.rvt;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
@@ -23,6 +24,22 @@ public class SortTest {
     @Test
     public void testAddMethodFrom() {
         int[] numbers = {-1, 6, 9, 8, 12};
-        assertEquals(1, Sort.indexOfSmallestFrom(numbers));
+        assertEquals(1, Sort.indexOfSmallestFrom(numbers, 0));
+    }
+
+    @Test
+    public void testswapMethod() {
+        int[] numbers = {3, 2, 5, 4, 8};
+        int[] numbers_rez = {2, 3, 5, 4, 8};
+        Sort.swap(numbers, 1, 0);
+        assertArrayEquals(numbers_rez, numbers);
+    }
+
+    @Test
+    public void testSortMethod() {
+        int[] numbers = {8, 3, 7, 9, 1, 2, 4};
+        int[] numbers_rez = {1, 2, 3, 4, 7, 8, 9};
+        Sort.sort(numbers);
+        assertArrayEquals(numbers_rez, numbers);
     }
 }
