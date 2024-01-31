@@ -36,8 +36,8 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        int[] numbers = {6, 5, 8, 7};
+        int[] numbers = {6, 5, 8, 7, 7, 9};
         sort(numbers);
-        System.out.println(BinSearch(numbers, 5));
+        System.out.println(BinSearch(numbers, 7));
     }
 }
