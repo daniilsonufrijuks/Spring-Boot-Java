@@ -20,5 +20,8 @@ public class Main {
         System.out.println(human.OldEnough());
         Alien alien = new Alien("Jhon", 1000, "Mars");
         System.out.println(alien);
+        System.out.println(alien.Getplanet());
+        alien.SetPlanet("Neptun");
+        System.out.println(alien);
     }
 }

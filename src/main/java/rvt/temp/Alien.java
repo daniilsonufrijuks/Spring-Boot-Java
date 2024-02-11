@@ -17,7 +17,7 @@ public class Alien extends Human{
     }
 
     public String toString() {
-        return this.toString() + " " + this.planet;
+        return super.toString() + " " + this.planet;
     }
 
 }
