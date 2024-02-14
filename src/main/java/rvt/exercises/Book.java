@@ -12,7 +12,7 @@ public class Book implements Packable {
     }
 
     public String toString() {
-        return this.author + " " + this.bookname + " " + this.weight;  
+        return this.author + ": " + this.bookname;  
     }
 
     @Override
