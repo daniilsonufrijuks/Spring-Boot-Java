@@ -13,5 +13,6 @@ public class ENUM_Exercises {
 
     public static void main(String[] args) {
         runCommand(ENUM_REAL.ADD);
+        System.out.println(ENUM_REAL.REMOVE.ordinal());
     }
 }
