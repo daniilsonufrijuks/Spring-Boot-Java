@@ -35,6 +35,6 @@ public class Employees {
             if (iterator.next().getEducation() == education) {
                 System.out.println(iterator.next());
             }
-        }
+        } 
     }
 }
